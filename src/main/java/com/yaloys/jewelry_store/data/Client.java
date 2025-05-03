@@ -1,4 +1,4 @@
-package data;
+package com.yaloys.jewelry_store.data;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,11 +16,12 @@ public class Client {
     @GeneratedValue
     private Long id;
 
-    @Column (nullable = false)
+    @Column (name = "fullName", nullable = false)
     private String fullName;
 
+    @Column (name = "birthDate")
     private LocalDate birthDate;
 
-    @Column (nullable = false)
+    @Column (name = "phoneNumber", nullable = false)
     private String phoneNumber;
 }

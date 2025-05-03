@@ -1,4 +1,4 @@
-@import data.Product
+    @import com.yaloys.jewelry_store.data.Product
 @import java.util.List
 
 @param List<Product> products

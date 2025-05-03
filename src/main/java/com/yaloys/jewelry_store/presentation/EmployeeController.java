@@ -1,9 +1,9 @@
-package presentation;
+package com.yaloys.jewelry_store.presentation;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import data.EmployeeRepository;
+import com.yaloys.jewelry_store.data.EmployeeRepository;
 
 @Controller
 public class EmployeeController {
@@ -13,7 +13,7 @@ public class EmployeeController {
     }
     @GetMapping("/employee")
     public String getEmployees(Model model) {
-        model.addAttribute("employee", employeeRepository.findAll());
+        model.addAttribute("employees", employeeRepository.findAll());
         return "employee";
     }
 

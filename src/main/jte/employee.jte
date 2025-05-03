@@ -1,4 +1,4 @@
-@import data.Employee
+@import com.yaloys.jewelry_store.data.Employee
 @import java.util.List
 
 @param List<Employee> employees

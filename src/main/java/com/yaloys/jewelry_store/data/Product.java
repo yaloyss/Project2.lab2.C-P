@@ -1,4 +1,4 @@
-package data;
+package com.yaloys.jewelry_store.data;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,20 +16,24 @@ public class Product {
     @GeneratedValue
     private Long id;
 
+    @Column (name = "name")
     private String name;
 
-    @Column (precision = 8, scale = 2)
+    @Column (name = "weight", precision = 8, scale = 2)
     private BigDecimal weight;
 
+    @Column (name = "metalType")
     private String metalType;
 
+    @Column (name = "stoneType")
     private String stoneType;
 
-    @Column (precision = 10, scale = 2, nullable = false)
+    @Column (name = "price", precision = 10, scale = 2, nullable = false)
     private BigDecimal price;
 
+    @Column (name = "manufacturer")
     private String manufacturer;
 
-    @Column (precision = 8, scale = 2)
+    @Column (name = "size", precision = 8, scale = 2)
     private BigDecimal size;
 }

@@ -1,9 +1,9 @@
-package presentation;
+package com.yaloys.jewelry_store.presentation;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import data.ClientRepository;
+import com.yaloys.jewelry_store.data.ClientRepository;
 
 @Controller
 public class ClientController {
@@ -13,7 +13,7 @@ public class ClientController {
     }
     @GetMapping("/client")
     public String getClients(Model model) {
-        model.addAttribute("client", clientRepository.findAll());
+        model.addAttribute("clients", clientRepository.findAll());
         return "client";
     }
 }

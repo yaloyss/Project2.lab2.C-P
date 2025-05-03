@@ -1,4 +1,4 @@
-@import data.Client
+@import com.yaloys.jewelry_store.data.Client
 @import java.util.List
 
 @param List<Client> clients

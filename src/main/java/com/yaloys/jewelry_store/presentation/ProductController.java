@@ -1,9 +1,9 @@
-package presentation;
+package com.yaloys.jewelry_store.presentation;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import data.ProductRepository;
+import com.yaloys.jewelry_store.data.ProductRepository;
 
 @Controller
 public class ProductController {
@@ -13,7 +13,7 @@ public class ProductController {
     }
     @GetMapping("/product")
     public String getProducts(Model model) {
-        model.addAttribute("product", productRepository.findAll());
+        model.addAttribute("products", productRepository.findAll());
         return "product";
     }
 }
